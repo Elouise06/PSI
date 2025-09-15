@@ -1,2 +1,2 @@
 # PSI
-Atualizado para receber conteudo da professora alba
+Atualizado para receber conteudo da professora
