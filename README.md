@@ -1,2 +1,2 @@
 # PSI
-para estudos
+Atualizado para receber conteudo da professora alba
