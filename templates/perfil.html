@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pefil de {{nome}}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<h2>Seja bem vindo(a) {{nome}}!</h2>
+		<img src="{{ url_for('static', filename='imgs/'+nome+'.jpg') }}"/>
+		<p> E-mail: {{ email }}</p>
+		<p> Telefone: {{ tel }}</p>
+	</body>
+</html> 
