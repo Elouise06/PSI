@@ -47,3 +47,49 @@
 #   return custo_total
 
 #print(calcular_custo((10000))
+
+
+# Crie uma função que ler 3 valores (A, B e C)
+# representando as medidas do lados de um triangulo
+# e escrever se formam ou não um triangulo.
+# OBS: para formar um triangulo, o valor de cada lado deve ser menor
+# que a soma dos outros 2 lados.
+
+import math
+A = 4; B = 5; C = 5
+#Isoceles = 2
+#Equilatero = 3
+#Escaleno = Todos diferentes
+def verificar_triangulo(A, B, C):
+    if A < B + C and B < A + C and C < A + B:
+        print("Formam um triângulo.")
+        if A == B and B == C:
+            print("É um triângulo Equilatero")
+            area = (math.sqrt(3)*pow(A,2))/4
+            print(f"A área do triangulo é: {area:.2f}")
+        elif A == B or B == C or A == C:
+            print("É um triangulo Isoceles")
+            if A == B:
+                base = C
+                lado = A
+            elif B == C:
+                base = A
+                lado = B
+            else:
+                base = B
+                lado = A
+
+            h = math.sqrt(lado**2 - (base / 2)**2)
+            area = (base * h) / 2
+            print(f"Área = {area:.2f}")
+
+        else:
+            print("É um triângulo Escaleno")
+            s = (A + B + C) / 2
+            area = math.sqrt(s * (s - A) * (s - B) * (s - C))
+            print(f"Área = {area:.2f}")
+
+    else:
+        print("Não formam um triângulo.")
+
+verificar_triangulo(A, B, C)
